@@ -17,7 +17,7 @@ check_port() {
 if ! check_port 8000; then
     echo "🔧 Starting FastAPI backend on port 8000..."
     cd api
-    python app.py &
+    python3 app.py &
     BACKEND_PID=$!
     cd ..
     echo "✅ Backend started with PID: $BACKEND_PID"

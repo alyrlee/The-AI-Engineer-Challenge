@@ -9,7 +9,11 @@ export const metadata: Metadata = {
   description: 'A beautiful chat interface for interacting with OpenAI models',
   keywords: ['AI', 'Chat', 'OpenAI', 'GPT', 'Next.js'],
   authors: [{ name: 'AI Engineer Challenge' }],
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
