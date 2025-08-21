@@ -84,6 +84,49 @@ Got everything in place? Let's move on!
 </details>
 
 <details>
+  <summary>🚀 Quick Start - Running Your Application</summary>
+
+### Prerequisites
+- Node.js 18+ installed
+- Python 3.8+ installed
+- OpenAI API key
+
+### Option 1: Easy Start (Recommended)
+Use the provided script to start both servers automatically:
+
+```bash
+./start-dev.sh
+```
+
+### Option 2: Manual Start
+Start the servers manually:
+
+1. **Start the FastAPI backend:**
+   ```bash
+   cd api
+   pip install -r requirements.txt
+   python app.py
+   ```
+   The backend will run on `http://localhost:8000`
+
+2. **Start the Next.js frontend (in a new terminal):**
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   The frontend will run on `http://localhost:3000`
+
+### Using the Application
+1. Open your browser and go to `http://localhost:3000`
+2. Click the settings icon (⚙️) in the header
+3. Enter your OpenAI API key
+4. Customize the system message and model if desired
+5. Start chatting with your AI assistant!
+
+</details>
+
+<details>
   <summary>🔥Setting Up for Vibe Coding Success </summary>
 
 While it is a bit counter-intuitive to set things up before jumping into vibe-coding - it's important to remember that there exists a gradient betweeen AI-Assisted Development and Vibe-Coding. We're only reaching *slightly* into AI-Assisted Development for this challenge, but it's worth it!
