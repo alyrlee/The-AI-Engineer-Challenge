@@ -30,7 +30,7 @@ export default function Home() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!inputMessage.trim() || !apiKey.trim()) return
+    if (!inputMessage.trim()) return
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -53,7 +53,7 @@ export default function Home() {
           developer_message: developerMessage,
           user_message: inputMessage,
           model: model,
-          api_key: apiKey
+          api_key: apiKey || undefined
         })
       })
 
@@ -149,15 +149,19 @@ export default function Home() {
               <div>
                 <label className="block text-sm font-medium text-dark-700 mb-2">
                   <Key className="inline h-4 w-4 mr-1" />
-                  OpenAI API Key
+                  OpenAI API Key (Optional)
                 </label>
                 <input
                   type="password"
                   value={apiKey}
                   onChange={(e) => setApiKey(e.target.value)}
-                  placeholder="sk-..."
+                  placeholder="Leave empty to use server API key"
                   className="input-field"
                 />
+                <p className="text-xs text-blue-600 mt-1">
+                  💡 Leave empty to use the server's pre-configured API key
+                </p>
+
               </div>
               <div>
                 <label className="block text-sm font-medium text-dark-700 mb-2">
@@ -204,7 +208,7 @@ export default function Home() {
                 Welcome to AI Engineer Challenge! 🚀
               </h3>
               <p className="text-dark-600 max-w-md mx-auto">
-                Start a conversation with your AI assistant. Make sure to set up your API key in the settings above.
+                Start a conversation with your AI assistant. The server has a pre-configured API key, so you can start chatting immediately! 🎉
               </p>
             </div>
           )}
